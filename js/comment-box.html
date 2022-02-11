@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment box</title>
+</head>
+<body>
+    <h1>Please submit your comment</h1>
+    <section>
+        <div id="allcomments">
+
+        </div>
+
+    </section>
+    <textarea name="" id="comment" cols="40" rows="10"></textarea> <br>
+    <button id="submit"> sumbit</button>
+    <script>
+        document.getElementById('submit').addEventListener('click',function(){
+            const comments=document.getElementById('comment');
+
+            const text =document.createElement('p')
+
+            text.innerText=comments.value;
+
+            const abc = document.getElementById('allcomments')
+            abc.appendChild(text);
+            comments.value='';
+        })
+    </script>
+</body>
+</html>
